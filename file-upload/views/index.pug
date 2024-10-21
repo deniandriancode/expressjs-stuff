@@ -1,0 +1,10 @@
+html
+  head
+    title= "Home | File Upload"
+  body
+    h1= message
+
+    form(method="post" action="/upload" enctype="multipart/form-data")
+      input(type="file" accept="image/*" name="dataPart")
+      button(type="submit") Upload
+
