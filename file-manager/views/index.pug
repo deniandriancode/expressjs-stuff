@@ -1,0 +1,21 @@
+html
+  head
+    title= title + " | File Manager"
+    link(rel="stylesheet" href="/public/styles.css")
+    script(src="/public/script.js" type="text/javascript" defer)
+  body
+    section(class="container")
+      ul
+        each elm in data.dirs
+          li(class="dir" onclick=`emitChangeDirectory('${elm}')` onkeydown=`handleEnter(event, '${elm}')` role="button" tabindex=1)
+            img(src="/public/folder-icon.png" width="40")
+            span= elm
+
+      ul
+        each elm in data.files
+          li(class="file" tabindex=1) #{elm}
+
+      div.wrapper
+        button(class="new_ newDirectory" onclick="handleNewDirectory()") New Directory
+        button(class="new_ newFile" onclick="handleNewFile()") New File
+        button(class="delete_ delete" onclick="handleDelete()") Delete

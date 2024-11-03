@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 1rem .8rem;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+ul img {
+  user-select: none;
+}
+
+.dir, .file {
+  min-height: 50px;
+  margin: 2px 3px;
+  padding: 1px 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.dir span {
+  margin-left: 5px;
+}
+
+.dir:hover, .dir:focus,
+.file:hover, .file:focus {
+  background: #eee;
+  border: 1px solid #ccc;
+}
+
+.wrapper {
+  display: flex;
+  gap: 5px;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}
+
+.new_ {
+  background: #0288D1;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.new_:hover {
+  background: #01579B;
+}
+
+.delete_ {
+  background: #D32F2F;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.delete_:hover {
+  background: #B71C1C;
+}
